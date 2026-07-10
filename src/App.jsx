@@ -1,11 +1,12 @@
+import { Container } from "./components/Container";
 import { LinkList } from "./components/LinkList";
 import { links } from "./components/links";
 
 function App() {
   return (
-    <div className="profile-page">
-      <LinkList links={links} />
-    </div>
+      <Container>
+        <LinkList links={links} />
+      </Container>
   );
 }
 

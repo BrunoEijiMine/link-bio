@@ -22,6 +22,7 @@ export const GlobalReset = createGlobalStyle`
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: ${theme.fonts.primary};
+    background-color: ${theme.colors.bgPage};
   }
 
   img, picture, video, canvas, svg {
