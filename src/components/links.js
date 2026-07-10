@@ -20,7 +20,7 @@ export const links = [
     id: 3,
     icon: faGlobe,
     title: "Portfolio",
-    description: "Veja meu trabalho completo",
-    href: "https://my-portfolio-brunoeiji.vercel.app/",
+    description: "Em construção!",
+    href: "",
   },
 ];
