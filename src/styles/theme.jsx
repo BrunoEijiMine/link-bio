@@ -3,7 +3,7 @@ export const theme = {
         // Fundo
         bgPage: "#f5f5f7",
         bgCard: "#ffffff",
-        bgBadgeAvailable: "#d1fae5",
+        bgBadgeAvailable: "#e8fff3",
 
         // Texto
         textPrimary: "#1a1a1a",
@@ -29,7 +29,7 @@ export const theme = {
     fontSizes: {
         title: "clamp(36px, 6vw, 72px)",
         heading: "clamp(28px, 4.5vw, 48px)",
-        subtitle: "clamp(24px, 4vw, 36px)",
+        subtitle: "clamp(24px, 4vw, 32px)",
         paragraph: "clamp(16px, 1.5vw, 16px)",
         icon: "clamp(18px, 2vw, 25px)"
     }

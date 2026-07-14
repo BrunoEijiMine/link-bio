@@ -14,4 +14,9 @@ const FooterContainer = styled.footer`
     padding: 1rem;
     background-color: ${theme.colors.backgroundSecondary};
     color: ${theme.colors.textSecondary};
+
+    p {
+        margin: 0;
+        font-size: 13px;
+    }
 `;
