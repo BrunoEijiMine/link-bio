@@ -1,22 +1,7 @@
-import styled from "styled-components";
-import { theme } from "../styles/theme";
-
 export function Footer() {
-    return (
-        <FooterContainer>
-            <p>© 2026 Bruno Eiji</p>
-        </FooterContainer>
-    );
+  return (
+    <footer className="p-4 text-center text-secondary">
+      <p className="m-0 text-[13px]">© 2026 Bruno Eiji</p>
+    </footer>
+  );
 }
-
-const FooterContainer = styled.footer`
-    text-align: center;
-    padding: 1rem;
-    background-color: ${theme.colors.backgroundSecondary};
-    color: ${theme.colors.textSecondary};
-
-    p {
-        margin: 0;
-        font-size: 13px;
-    }
-`;

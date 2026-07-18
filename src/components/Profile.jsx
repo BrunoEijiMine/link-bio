@@ -1,6 +1,4 @@
 import Divider from "./Divider";
-import styled from "styled-components";
-import { theme } from "../styles/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapPin, faBriefcase, faCode } from "@fortawesome/free-solid-svg-icons";
 import profilePhoto from "../assets/profile.jpeg";
@@ -8,150 +6,46 @@ import profilePhoto from "../assets/profile.jpeg";
 export function Profile() {
   return (
     <>
-      <ProfileContainer>
-          <img src={profilePhoto} alt="Foto de perfil" />
-          <h1>Bruno Eiji</h1>
+      <div className="mb-8 flex flex-col items-center">
+        <img
+          src={profilePhoto}
+          alt="Foto de perfil"
+          className="mb-4 h-25 w-25 rounded-full object-cover"
+        />
+        <h1 className="mb-2 text-subtitle text-primary">Bruno Eiji</h1>
 
-          <OnlineStatus>
-            <p>
-              <StatusDot />
-              Disponível
-            </p>
-          </OnlineStatus>
+        <div className="mb-4 flex flex-col items-center rounded-2xl bg-badge px-3 py-1">
+          <p className="flex items-center gap-2 text-[13px] text-badge-fg">
+            <span className="relative inline-block h-2 w-2 rounded-full bg-badge-fg before:absolute before:inset-0 before:animate-[status-pulse_1.5s_ease-out_infinite] before:rounded-full before:bg-badge-fg before:content-['']" />
+            Disponível
+          </p>
+        </div>
 
-          <p className="career"><FontAwesomeIcon className="icon" icon={faCode} /> Desenvolvedor Front-End · UI/UX </p>
-          <p className="about-me">Crio experiências web rápidas, acessíveis e com um design impecável. Sou apaixonado por código limpo, sistemas de design e por tornar a web um lugar melhor — um componente de cada vez. 🚀</p>
-        </ProfileContainer>
+        <p className="mb-4 text-paragraph text-secondary">
+          <FontAwesomeIcon className="text-role" icon={faCode} /> Desenvolvedor Front-End · UI/UX{" "}
+        </p>
+        <p className="text-center text-paragraph text-secondary">
+          Crio experiências web rápidas, acessíveis e com um design impecável. Sou apaixonado por
+          código limpo, sistemas de design e por tornar a web um lugar melhor — um componente de
+          cada vez. 🚀
+        </p>
+      </div>
 
-        <ContainerInfo>
-          <Info>
-            <p className="info-title">
-              <FontAwesomeIcon className="icon" icon={faMapPin} /> Barretos - SP
-            </p>
-          </Info>
+      <div className="mb-8 flex flex-wrap justify-center gap-3">
+        <div className="flex items-center gap-2 whitespace-nowrap rounded-2xl bg-card px-3 py-1">
+          <p className="flex items-center gap-1.5 whitespace-nowrap text-[13px] text-secondary">
+            <FontAwesomeIcon className="text-[14px] text-secondary" icon={faMapPin} /> Barretos - SP
+          </p>
+        </div>
 
-          <Info>
-            <p className="info-title">
-              <FontAwesomeIcon className="icon" icon={faBriefcase} /> Mais de 4 anos de experiência
-            </p>
-          </Info>
-        </ContainerInfo>
+        <div className="flex items-center gap-2 whitespace-nowrap rounded-2xl bg-card px-3 py-1">
+          <p className="flex items-center gap-1.5 whitespace-nowrap text-[13px] text-secondary">
+            <FontAwesomeIcon className="text-[14px] text-secondary" icon={faBriefcase} /> Mais de 4
+            anos de experiência
+          </p>
+        </div>
+      </div>
       <Divider text="Links" />
     </>
   );
 }
-
-const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-size: ${theme.fontSizes.subtitle};
-    color: ${theme.colors.textPrimary};
-    margin-bottom: 0.5rem;
-  }
-
-  .icon {
-    color: ${theme.colors.textRole};
-  }
-
-  .career {
-    font-size: ${theme.fontSizes.paragraph};
-    color: ${theme.colors.textSecondary};
-    margin-bottom: 1rem;
-  }
-
-  .about-me {
-    font-size: ${theme.fontSizes.paragraph};
-    color: ${theme.colors.textSecondary};
-    text-align: center;
-  }
-`;
-
-const OnlineStatus = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: ${theme.colors.bgBadgeAvailable};
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-
-  p {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 13px;
-    color: ${theme.colors.textBadgeAvailable};
-  }
-`;
-
-const StatusDot = styled.span`
-  position: relative;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: ${theme.colors.textBadgeAvailable};
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background-color: ${theme.colors.textBadgeAvailable};
-    animation: pulse 1.5s ease-out infinite;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      opacity: 0.7;
-    }
-    100% {
-      transform: scale(2.5);
-      opacity: 0;
-    }
-  }
-`;
-
-const ContainerInfo = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-`;
-
-const Info = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: ${theme.colors.bgCard};
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  white-space: nowrap;
-
-  .info-title {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 13px;
-    color: ${theme.colors.textSecondary};
-    white-space: nowrap;
-  }
-
-  .icon {
-    color: ${theme.colors.textSecondary};
-    font-size: 14px;
-  }
-`;

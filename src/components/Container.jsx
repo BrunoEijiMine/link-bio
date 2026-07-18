@@ -1,12 +1,7 @@
-import styled from "styled-components";
-
-export const Container = styled.div`
-    max-width: 724px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 4rem;
-
-    @media (max-width: 1200px) {
-        padding: 2rem;
-    }
-`;
+export function Container({ children }) {
+  return (
+    <div className="mx-auto w-full max-w-[724px] p-16 max-[1200px]:p-8">
+      {children}
+    </div>
+  );
+}
