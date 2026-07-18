@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <ThemeToggle />
       <Container>
         <Profile />
@@ -17,7 +17,7 @@ function App() {
 
       <Footer />
       <Analytics />
-    </>
+    </div>
   );
 }
 

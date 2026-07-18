@@ -10,7 +10,7 @@ export function Profile() {
         <img
           src={profilePhoto}
           alt="Foto de perfil"
-          className="mb-4 h-25 w-25 rounded-full object-cover"
+          className="mb-4 h-25 w-25 rounded-full object-cover grayscale"
         />
         <h1 className="mb-2 text-subtitle text-primary">Bruno Eiji</h1>
 

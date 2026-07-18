@@ -22,8 +22,9 @@ export const links = [
     id: 3,
     icon: faGlobe,
     title: "Portfolio",
-    description: "Em construção!",
-    href: "",
-    disabled: true,
+    description: "Confira meus projetos e trabalhos",
+    href: "https://bruno-eiji.vercel.app/",
+    color: "#4ade80",
+    isNew: true,
   },
 ];

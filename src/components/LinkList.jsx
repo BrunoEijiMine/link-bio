@@ -31,6 +31,7 @@ export function LinkList({ links }) {
           href={link.href}
           disabled={link.disabled}
           color={link.color}
+          isNew={link.isNew}
         />
       ))}
     </div>
