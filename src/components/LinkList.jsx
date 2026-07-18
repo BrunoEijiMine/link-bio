@@ -11,6 +11,7 @@ export function LinkList({ links }) {
           description={link.description}
           href={link.href}
           disabled={link.disabled}
+          color={link.color}
         />
       ))}
     </div>

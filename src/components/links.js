@@ -8,6 +8,7 @@ export const links = [
     title: "GitHub",
     description: "Meus projetos e contribuições",
     href: "https://github.com/BrunoEijiMine",
+    color: "#8250df",
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const links = [
     title: "LinkedIn",
     description: "Vamos nos conectar profissionalmente",
     href: "https://www.linkedin.com/in/bruno-eiji-1b47b1206/",
+    color: "#0a66c2",
   },
   {
     id: 3,
