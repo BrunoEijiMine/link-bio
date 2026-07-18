@@ -2,14 +2,14 @@ import Divider from "./Divider";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapPin, faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import { faBuffer } from "@fortawesome/free-brands-svg-icons";
+import { faMapPin, faBriefcase, faCode } from "@fortawesome/free-solid-svg-icons";
+import profilePhoto from "../assets/profile.jpeg";
 
 export function Profile() {
   return (
     <>
       <ProfileContainer>
-          <img src="https://github.com/BrunoEijiMine.png" alt="Foto de perfil" />
+          <img src={profilePhoto} alt="Foto de perfil" />
           <h1>Bruno Eiji</h1>
 
           <OnlineStatus>
@@ -19,7 +19,7 @@ export function Profile() {
             </p>
           </OnlineStatus>
 
-          <p className="career"><FontAwesomeIcon className="icon" icon={faBuffer} /> Desenvolvedor Front-End · UI/UX </p>
+          <p className="career"><FontAwesomeIcon className="icon" icon={faCode} /> Desenvolvedor Front-End · UI/UX </p>
           <p className="about-me">Crio experiências web rápidas, acessíveis e com um design impecável. Sou apaixonado por código limpo, sistemas de design e por tornar a web um lugar melhor — um componente de cada vez. 🚀</p>
         </ProfileContainer>
 

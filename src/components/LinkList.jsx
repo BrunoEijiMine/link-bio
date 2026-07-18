@@ -17,6 +17,7 @@ export function LinkList({ links }) {
           title={link.title}
           description={link.description}
           href={link.href}
+          disabled={link.disabled}
         />
       ))}
     </List>

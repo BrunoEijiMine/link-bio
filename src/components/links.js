@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe, faBookOpen, faFileLines, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 export const links = [
   {
@@ -22,5 +22,6 @@ export const links = [
     title: "Portfolio",
     description: "Em construção!",
     href: "",
+    disabled: true,
   },
 ];

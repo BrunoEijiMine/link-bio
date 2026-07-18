@@ -3,7 +3,7 @@ import { LinkList } from "./components/LinkList";
 import { Profile } from "./components/Profile";
 import { links } from "./components/links";
 import { Footer } from "./components/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       </Container>
 
       <Footer />
+      <Analytics />
     </>
   );
 }

@@ -18,6 +18,12 @@ const Card = styled.a`
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -47,9 +53,14 @@ const Description = styled.p`
   color: ${theme.colors.textSecondary};
 `;
 
-export function LinkCard({ icon, title, description, href }) {
+export function LinkCard({ icon, title, description, href, disabled }) {
   return (
-    <Card href={href} target="_blank" rel="noopener noreferrer">
+    <Card
+      href={disabled ? undefined : href}
+      target={disabled ? undefined : "_blank"}
+      rel={disabled ? undefined : "noopener noreferrer"}
+      aria-disabled={disabled}
+    >
       <IconWrapper>
         <FontAwesomeIcon icon={icon} size="lg" />
       </IconWrapper>
@@ -59,7 +70,9 @@ export function LinkCard({ icon, title, description, href }) {
         <Description>{description}</Description>
       </TextWrapper>
 
-      <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="sm" color={theme.colors.textMuted} />
+      {!disabled && (
+        <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="sm" color={theme.colors.textMuted} />
+      )}
     </Card>
   );
 }

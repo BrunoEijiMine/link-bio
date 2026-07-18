@@ -15,11 +15,6 @@ export const theme = {
         // Bordas
         borderCard: "#e5e7eb",
         borderTag: "#e5e7eb",
-
-        // Ícones de destaque
-        iconLocation: "#ef4444",
-        iconBriefcase: "#92400e",
-        iconCoffee: "#78350f",
     },
 
     fonts: {
